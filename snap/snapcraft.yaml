@@ -1,0 +1,21 @@
+name: testgtksharp
+version: '0.1'
+base: core22
+grade: devel
+confinement: devmode
+summary: Snap a GtkSharp application
+description: |
+  This is my-snap's description.
+
+parts:
+  testgtksharp:
+    plugin: dotnet
+    dotnet-build-configuration: Release
+    dotnet-self-contained-runtime-identifier: linux-x64
+    source: .
+    build-packages:
+      - dotnet-sdk-8.0
+apps:
+  testgtksharp:
+    extensions: [gnome]
+    command: TestGtkSharp
