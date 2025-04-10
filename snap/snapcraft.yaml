@@ -19,3 +19,7 @@ apps:
   testgtksharp:
     extensions: [gnome]
     command: TestGtkSharp
+lint:
+  ignore:
+    - library:
+      - libcoreclrtraceptprovider.so* # to remove the warning message: missing dependency 'liblttng-ust.so.0'
